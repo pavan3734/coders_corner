@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <title>Coder's Corner</title>
+     </head>
+     <style>
+          *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+body{
+     font-family: Montserrat;
+}
+
+
+nav{
+     display: flex;
+     background-color: #1C2833;
+     height: 80px;
+     width: 100%;
+     justify-content: space-between;
+     align-items: center;
+     padding: 0px 50px 0px 80px;
+}
+.logo{
+     font-size: 25px;
+     font-weight: bold;
+     color: white;
+}
+nav ul{
+     display: flex;
+}
+nav ul li{
+     list-style-type: none;
+     margin: 0 8px;
+}
+nav ul li a{
+     text-decoration: none;
+     font-size: 18px;
+     font-weight: 500;
+     color: white;
+     padding: 7px 13px;
+     border-radius: 3px;
+     transition: 0.5s;
+     text-transform: uppercase;
+}
+nav ul li a:hover, nav ul li a.active{
+     background-color: #566573;
+}
+.menu-btn{
+     color: white;
+     font-size: 22px;
+     cursor: pointer;
+     display: none;
+}
+#click{
+     display: none;
+}
+
+
+/* Responsive work start */
+
+only screen and (max-width: 940px) {
+     .menu-btn{
+          display: block;
+     }
+     nav ul{
+          position: fixed;
+          top: 80px;
+          left: -100%;
+          background-color: #17202A;
+          height: 100vh;
+          width: 100%;
+          padding-top: 20px;
+          flex-direction: column;
+          text-align: center;
+          transition: all 0.5s ease;
+     }
+     #click:checked ~ .menu-btn i::before{
+          content: "\f00d";
+     }
+     #click:checked ~ ul{
+          left: 0%;
+     }
+     nav ul li{
+          margin: 50px 0;
+     }
+     nav ul li a{
+          font-size: 22px;
+     }
+     nav ul li a:hover, nav ul li a.active{
+          background: none;
+          color: red;
+     }
+}
+
+
+
+header{
+     background-image: url('images/bannerr.jpg');
+     height: 90vh;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center center;
+}
+
+
+
+
+#seven-section{
+     padding: 100px 0;
+}
+#takeCare-parent{
+     display: flex;
+     margin-left: 200px;
+     margin-right: 200px;
+     gap: 30px;
+     justify-content: space-between;
+     align-items: center;
+}
+.single-takeCare-imgbox{
+     width: 100%;
+}
+.single-takeCare-imgbox img{
+     width: 100%;
+}
+.single-takeCare h3{
+     font-size: 30px;
+}
+.single-takeCare p{
+     margin: 20px 0;
+}
+.single-takeCare ul li{
+     list-style-position:inside;
+     margin: 10px 0;
+}
+
+
+footer{
+     background-color: #154360;
+     padding: 100px 0 50px 0;
+}
+#footer-parent{
+     display: flex;
+     margin-left: 200px;
+     margin-right: 200px;
+     color: white;
+     gap: 80px;
+}
+.single-footer{
+     width: 100%;
+}
+.single-footer h5{
+     margin-bottom: 25px;
+     letter-spacing: 3px;
+}
+.single-footer-2 p{
+     margin: 15px;
+}
+.single-footer-2 a{
+     text-decoration: none;
+     color: white;
+}
+.single-footer-3 ul{
+     display: flex;
+}
+.single-footer-3 ul li{
+     list-style-type: none;
+}
+.single-footer-3 ul li a{
+     text-decoration: none;
+     color: white;
+     margin: 0 5px;
+     background-color: #0a273863;
+     padding: 8px;
+}
+.single-footer h5 span{
+     color: yellow;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 688px) {
+     
+     /* Start Take Care section code */
+     #takeCare-parent{
+          display: block;
+          margin-left: 30px;
+          margin-right: 30px;
+     }     
+     .single-takeCare{
+          margin-bottom: 70px;
+     }
+     /* Finished Take Care section */
+
+     /* Start Footer Section */
+
+     #footer-parent{
+          display: flex;
+          flex-direction: column;
+          margin-left: 30px;
+          margin-right: 30px;
+     }
+     .single-footer{
+          text-align: center;
+     }
+     .single-footer-3 ul{
+          display: flex;
+          justify-content: center;
+     }
+}
+
+
+
+
+@media only screen and (min-width: 689px) and (max-width: 1099px) {
+     
+
+     /* Start Take Care section code */
+     #takeCare-parent{
+          display: block;
+          margin-left: 70px;
+          margin-right: 70px;
+     }
+     .single-takeCare{
+          margin-bottom: 80px;
+     }
+     /* Finished Take Care section */
+
+     /* Start Footer Section code */
+
+     #footer-parent{
+          margin-left: 50px;
+          margin-right: 50px;
+     }
+}
+
+
+     </style>
+<body>
+     
+     
+     <nav>
+          <div class="logo">
+               Coder's Corner
+          </div>
+
+          <input type="checkbox" id="click">
+          <label for="click" class="menu-btn"> </i> </label>
+
+          <ul>
+               <li> <a class="active" href="#"> Home </a> </li>
+               <li> <a href="login.html"> Login </a> </li>
+               <li> <a href="service.html"> Services </a> </li>
+               <li> <a href="about.html"> About </a> </li>
+               <li> <a href="contact.html"> Contact </a> </li>
+          </ul>
+     </nav>
+
+     <header>
+          
+     </header>
+
+          <!-- Fourth Section code start -->
+          <section id="seven-section">
+               <div id="takeCare-parent">
+                    <div class="single-takeCare">
+                         <h3> Every Part of Your IT Ecosystem. Taken Care Of. </h3>
+                         <p> Comprehensive care of your cloud or on-premises infrastructure and applications: </p>
+                         <ul>
+                              <li> Consulting </li>
+                              <li> Implementation </li>
+                              <li> Management and Support </li>
+                              <li> Security </li>
+                         </ul>
+                    </div>
+
+                    <div class="single-takeCare-imgbox">
+                         <img src="images/take-care.jpg">
+                    </div>
+               </div>
+          </section>
+     </main>
+
+
+     <footer>
+          
+
+          <p style="text-align: center; color: white;"> &copy; || 2023 - Coder's Corner || </p>
+          <p style="text-align: center; color: white;"> Gmail : pavanpa3734@gmail.com </p>
+
+     </footer>
+
+
+
+</body>
+</html>
